@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | Books</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Add Font  for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul><!--references for home,member,books and transactions pages-->
+                    <li><a href="test.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="testmember.html"><i class="fas fa-users"></i> Members</a></li>
+                    <li class="current"><a href="testbooks.html"><i class="fas fa-book"></i> Books</a></li>
+                    <li><a href="testtransactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="books" class="container">
+            <div class="books-header">
+                <h2><i class="fas fa-book"></i> Library Books Management</h2>
+            </div>
+
+            <div class="book-management-section">
+                <!-- Book Stats -->
+                <div class="book-stats"><!--total books box-->
+                    <div class="stat-card">
+                        <i class="fas fa-book"></i>
+                        <span id="totalBooks">0</span>
+                        <p>Total Books</p>
+                    </div>
+                    <div class="stat-card"><!--borrowed books box-->
+                        <i class="fas fa-book-reader"></i>
+                        <span id="borrowedBooks">0</span>
+                        <p>Borrowed Books</p>
+                    </div>
+                    <div class="stat-card"><!--available books box-->
+                        <i class="fas fa-check-circle"></i>
+                        <span id="availableBooks">0</span>
+                        <p>Available Books</p>
+                    </div>
+                </div>
+
+                <!-- Add Book Form -->
+                <div class="add-book-form">
+                    <h3><i class="fas fa-plus-circle"></i> Add New Book</h3>
+                    <form id="bookForm">
+                        <div class="form-group">
+                            <label for="bookTitle">Book Title:</label>
+                            <input 
+                                type="text" 
+                                id="bookTitle" 
+                                placeholder="Enter book title" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookAuthor">Author:</label>
+                            <input 
+                                type="text" 
+                                id="bookAuthor" 
+                                placeholder="Enter author name" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group"><!--category selection-->
+                            <label for="bookCategory">Category:</label>
+                            <select id="bookCategory" required>
+                                <option value="">Select category</option>
+                                <option value="fiction">Fiction</option>
+                                <option value="non-fiction">Non-Fiction</option>
+                                <option value="science">Science</option>
+                                <option value="technology">Technology</option>
+                                <option value="history">History</option>
+                                <option value="literature">Literature</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookISBN">ISBN:</label>
+                            <input 
+                                type="text" 
+                                id="bookISBN" 
+                                placeholder="Enter ISBN"
+                            >
+                        </div>
+
+                        <button type="submit" class="button1">
+                            <i class="fas fa-plus"></i> Add Book
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Book List Section -->
+                <div class="book-list-section">
+                    <h3><i class="fas fa-list"></i> Book Inventory</h3>
+                    
+                    <!-- Search and Filter -->
+                    <div class="search-filter-container">
+                        <div class="search-bar">
+                            <input 
+                                type="text" 
+                                id="searchBook" 
+                                placeholder="Search books..."
+                            >
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <select id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="fiction">Fiction</option>
+                                <option value="non-fiction">Non-Fiction</option>
+                                <option value="science">Science</option>
+                                <option value="technology">Technology</option>
+                                <option value="history">History</option>
+                                <option value="literature">Literature</option>
+                            </select>
+                            <select id="statusFilter">
+                                <option value="">All Status</option>
+                                <option value="available">Available</option>
+                                <option value="borrowed">Borrowed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Book List -->
+                    <div class="book-list" id="book-list">
+                        <!-- Books will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Group 1 BSIT Batch18, Copyright &copy; <span id="currentYear">2024</span></p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="test.js"></script>
+</body>
+</html>

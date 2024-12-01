@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="test.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="testmember.html"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="testbooks.html"><i class="fas fa-book"></i> Books</a></li>
+                    <li><a href="testtransactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="showcase">
+            <div class="container">
+                <h1><i class="fas fa-book-reader"></i> Welcome to Our Library</h1>
+                <p>Discover, Learn, and Grow with Our Collection</p>
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section id="quick-stats" class="container">
+            <h2>Library Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-books"></i>
+                    <h3>Total Books</h3>
+                    <p id="totalBooks">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Active Members</h3>
+                    <p id="totalMembers">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Books Borrowed</h3>
+                    <p id="borrowedBooks">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Due Today</h3>
+                    <p id="dueToday">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions Section 
+        <section id="quick-actions" class="container">
+            <h2>Quick Actions</h2>
+            <div class="actions-grid">
+                <a href="testmember.html" class="action-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Add Member</h3>
+                    <p>Register new library members</p>
+                </a>
+                <a href="testbooks.html" class="action-card">
+                    <i class="fas fa-book-medical"></i>
+                    <h3>Add Book</h3>
+                    <p>Add new books to inventory</p>
+                </a>
+                <a href="testtransactions.html" class="action-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>New Transaction</h3>
+                    <p>Process loans and returns</p>
+                </a>
+                <a href="#" class="action-card" id="generateReport">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Generate Report</h3>
+                    <p>View library statistics</p>
+                </a>
+            </div>
+        </section>-->
+
+        <!-- Recent Activity Section -->
+        <section id="recent-activity" class="container">
+            <h2>Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-filters">
+                    <select id="activityType">
+                        <option value="all">All Activities</option>
+                        <option value="books">Book Activities</option>
+                        <option value="members">Member Activities</option>
+                        <option value="transactions">Transactions</option>
+                    </select>
+                </div>
+                <div id="activityFeed">
+                    <!-- Activity items will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this section after your dashboard stats -->
+        <section class="active-members-section">
+            <h3><i class="fas fa-users"></i> Active Members</h3>
+            <div id="activeMembersList">
+                <!-- Active members will be dynamically added here -->
+            </div>
+        </section>
+        
+         <!--section of the collaborators-->
+    <section id="boxes">
+        <h1>Collaborators:</h1>
+        <div class="container">
+            <div class="box">
+              <img src="copymembermores.png">
+              <h3>Mores Jimenea</h3>
+  
+            </div>
+            <div class="box">
+              <img src="copymemberjoy.png">
+              <h3>Joy Faith P. Tonogbanua</h3>
+      
+            </div>
+            <div class="box">
+              <img src="copymemberroy.png">  
+              <h3>Roy Vincent R. Pertubal</h3>
+      
+            </div>
+            <div class="box">
+              <img src="copymemberlouie.png">
+              <h3>Louie R. Vista</h3>
+      
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Group 1 BSIT Batch18, Copyright &copy; <span id="currentYear">2024</span></p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | Transactions</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul><!--references for home,member,books and transactions pages-->
+                    <li><a href="test.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="testmember.html"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="testbooks.html"><i class="fas fa-book"></i> Books</a></li>
+                    <li class="current"><a href="testtransactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="transactions" class="container">
+            <div class="transactions-header">
+                <h2><i class="fas fa-exchange-alt"></i> Library Transactions</h2>
+            </div>
+            <!--transaction form-->
+            <div class="transaction-management-section">
+                <div class="new-transaction-form">
+                    <h3>New Transaction</h3>
+                    <form id="transactionForm">
+                        <div class="form-group">
+                            <label for="memberID">Member ID:</label>
+                            <input 
+                                type="text" 
+                                id="memberID" 
+                                placeholder="Enter member ID" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookID">Book ID:</label>
+                            <input 
+                                type="text" 
+                                id="bookID" 
+                                placeholder="Enter book ID" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transactionType">Transaction Type:</label>
+                            <select id="transactionType" required>
+                                <option value="">Select type</option>
+                                <option value="borrow">Borrow</option>
+                                <option value="return">Return</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="button1" id="processTransaction">
+                            <i class="fas fa-check-circle"></i> Process Transaction
+                        </button>
+                    </form>
+                </div>
+
+                <div class="transaction-list-section">
+                    <h3>Transaction History</h3>
+                    
+                    <div class="transaction-filters">
+                        <div class="search-bar">
+                            <input type="text" 
+                                   id="searchTransaction" 
+                                   placeholder="Search by member, book, or transaction ID...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <select id="transactionStatusFilter">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="completed">Completed</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                        <select id="transactionTypeFilter">
+                            <option value="">All Types</option>
+                            <option value="borrow">Borrow</option>
+                            <option value="return">Return</option>
+                        </select>
+                    </div>
+
+                    <div class="transaction-stats"><!--transaction stat boxes-->
+                        <div class="stat-card">
+                            <h3><i class="fas fa-book-reader"></i> Active Loans</h3>
+                            <p id="activeLoans">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Overdue Items</h3>
+                            <p id="overdueItems">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3><i class="fas fa-check-circle"></i> Completed Today</h3>
+                            <p id="completedToday">0</p>
+                        </div>
+                    </div>
+
+                    <div id="transaction-list" class="transaction-list">
+                        <!-- Transactions will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Group 1 BSIT Batch18, Copyright &copy; <span id="currentYear">2024</span></p>
+        </div>
+    </footer>
+    
+    <script src="test.js"></script>
+</body>
+</html>

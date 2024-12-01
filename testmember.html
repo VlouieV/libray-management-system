@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | Member</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Add Font  for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul><!--references for home,member,books and transactions pages-->
+                    <li><a href="test.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="current"><a href="testmember.html"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="testbooks.html"><i class="fas fa-book"></i> Books</a></li>
+                    <li><a href="testtransactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main><!--form for sign up functions-->
+        <section id="membership" class="container">
+            <div class="signup-section">
+                <h2>Not a member yet?</h2>
+                <p>Join our library community today!</p>
+                <button type="button" class="button1" id="showRegistrationForm">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+            </div>
+                <!--member registration form-->
+            <div class="registration-form" id="registrationForm">
+                <h2>Member Registration</h2>
+                <form id="memberForm">
+                    <div class="form-group">
+                        <label for="memberName">Full Name:</label>
+                        <input 
+                            type="text" 
+                            id="memberName" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="Enter your email" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberType">Member Type:</label>
+                        <select id="memberType" required>
+                            <option value="">Select member type</option>
+                            <option value="student">Student</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button1" id="registerMember">
+                        <i class="fas fa-user-check"></i> Register Member
+                    </button>
+                </form>
+            </div>
+            <!--list of member-->
+            <div class="member-list-section">
+                <h2>Current Members</h2>
+                <div class="search-bar">
+                    <input 
+                        type="text" 
+                        id="searchMember" 
+                        placeholder="Search members..."
+                    >
+                    <i class="fas fa-search"></i>
+                </div>
+                <ul id="member-list" class="member-list">
+                    <!-- Members will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Group 1 BSIT Batch18, Copyright &copy; <span id="currentYear">2024</span></p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="test.js"></script>
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="window.library.closeModal('memberModal')">&times;</span>
+            <div id="memberDetails">
+                <!-- Member details will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
